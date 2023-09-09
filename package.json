@@ -1,0 +1,22 @@
+{
+  "name": "refugia-acao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thayssa-souza/refugia-acao.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thayssa-souza/refugia-acao/issues"
+  },
+  "homepage": "https://github.com/thayssa-souza/refugia-acao#readme",
+  "devDependencies": {
+    "jest": "^29.6.4"
+  }
+}
