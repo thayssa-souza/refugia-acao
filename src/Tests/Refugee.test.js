@@ -26,14 +26,13 @@ describe('Testing Refugee class', () => {
 
     describe('Testing addService() function', () => {
         it('Should add service if service is not empty or null', () => {
-            const service = 'Aerospace engineer';
-
+            let service = 'Aerospace engineer';
             expect(refugee1.addService(service)).toBe(true);
             expect(refugee1.serviceHistory).toContain(service);
         });
 
         it('Should print a error mensage and return false if service is empty or null', () => {
-            const service = '';
+            let service = '';
     
             expect(refugee1.addService(service)).toBe(false);
             expect(refugee1.serviceHistory).not.toContain(service);
