@@ -3,7 +3,27 @@ const { Person } = require('../Person');
 describe('Testing Person class', () => {
     let person1;
     beforeEach(() => {
-        person1 = new Person('Daphne', 'daphne@gmail.com', '02/12/2023', 'Female');
+        person1 = new Person('Daphne', 'daphne@gmail.com', '02/12/2001', 'Female');
+    });
+
+    describe('Testing getters and setters', () => {
+        it('Should return the registred birth date', () => {
+            expect(person1.birthDate).toBe('02/12/2001');
+        });
+
+        it('Should update the birth date', () => {
+            person1.birthDate = '07/07/2002';
+            expect(person1.birthDate).toBe('07/07/2002');
+        });
+
+        it('Should return the registred gender', () => {
+            expect(person1.gender).toBe('Female');
+        });
+
+        it('Should update the birth date', () => {
+            person1.gender = 'Genderfluid';
+            expect(person1.gender).toBe('Genderfluid');
+        });
     });
 
     describe('Testing verifyLanguage() function', () => {
