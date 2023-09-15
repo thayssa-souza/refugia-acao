@@ -1,10 +1,16 @@
 const { Person } = require('./Person');
 
 class Refugee extends Person {
-    constructor(name, email, birthDate, countryOrigin, gender) {
+    static refugees = [];
+
+    constructor(name, email, birthDate, gender, countryOrigin) {
         super(name, email, birthDate, gender);
         this.countryOrigin = countryOrigin;
         this.serviceHistory = [];
+        Refugee.refugees.push({
+            name: this.name,
+            countryOrigin: this.countryOrigin
+        });
     }
 
     isEmptyService(service){

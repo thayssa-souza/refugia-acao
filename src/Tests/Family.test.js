@@ -48,6 +48,11 @@ describe('Testing Family class', () => {
             expect(familyDoo.members).not.toContain(refugee1);
             expect(familyDoo.members).toContain(refugee2);
         });
+
+        it('should not remove anything when index is -1', () => {
+            familyDoo.removeFamilyMember(refugee1);
+            expect(familyDoo.members).toEqual([]);
+        });
     });
 
     describe('Testing the addContactInfo() function', () => {
@@ -76,6 +81,11 @@ describe('Testing Family class', () => {
     
             familyDoo.removeContactInfo('phone');
             expect(familyDoo.contact).toEqual([{ email: 'doofamily@gmail.com' }]);
+        });
+
+        it('should not remove anything when index is -1', () => {
+            familyDoo.removeContactInfo('phone');
+            expect(familyDoo.contact).toEqual([]);
         });
     });
 });
